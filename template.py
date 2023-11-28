@@ -1,3 +1,5 @@
+# This file creates a directory for each file in the list of files.
+
 import os
 from pathlib import Path
 import logging
@@ -39,8 +41,7 @@ for filepath in list_of_files:
     if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
         with open(filepath, "w") as f:
             pass
-        logging.info(f"Creating empyt file: {filepath}")
+        logging.info(f"Creating empty file: {filepath}")
 
     else:
         logging.info(f"File already exists: {filepath}")
-        
